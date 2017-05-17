@@ -46,7 +46,7 @@ HomeController = RouteController.extend({
   //  action: 'myActionFunction'
   
   action: function () {
-    this.render();
+    this.render('AuthForm');
   },
   onAfterAction: function () {
   },
