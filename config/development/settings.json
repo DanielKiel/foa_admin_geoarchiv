@@ -1,8 +1,7 @@
 {
   "public": {
+    "serviceUrl": "http://foa.dev"
   },
 
-  "sample": "value",
-
-  "baseUrl": "http://foa.dev"
+  "sample": "value"
 }

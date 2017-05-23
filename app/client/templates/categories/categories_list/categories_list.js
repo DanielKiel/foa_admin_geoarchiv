@@ -8,6 +8,18 @@ Template.CategoriesList.events({
 /* CategoriesList: Helpers */
 /*****************************************************************************/
 Template.CategoriesList.helpers({
+
+    settings: function() {
+        return {
+            collection: Categories,
+            fields: [
+                "_id",
+                "title",
+                "headline"
+            ],
+            class: "table table-bordered table-hover"
+        }
+    }
 });
 
 /*****************************************************************************/

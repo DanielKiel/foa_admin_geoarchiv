@@ -2,12 +2,24 @@
 /* LinksList: Event Handlers */
 /*****************************************************************************/
 Template.LinksList.events({
+
 });
 
 /*****************************************************************************/
 /* LinksList: Helpers */
 /*****************************************************************************/
 Template.LinksList.helpers({
+    settings: function() {
+        return {
+            collection: Links,
+            fields: [
+                "_id",
+                "linktext",
+                "url"
+            ],
+            class: "table table-bordered table-hover"
+        }
+    }
 });
 
 /*****************************************************************************/

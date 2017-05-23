@@ -8,6 +8,18 @@ Template.GeoCoordinatesList.events({
 /* GeoCoordinatesList: Helpers */
 /*****************************************************************************/
 Template.GeoCoordinatesList.helpers({
+    settings: function() {
+        return {
+            collection: GeoCoordinates,
+            fields: [
+                "_id",
+                "title",
+                "longitude",
+                "latitude"
+            ],
+            class: "table table-bordered table-hover"
+        }
+    }
 });
 
 /*****************************************************************************/

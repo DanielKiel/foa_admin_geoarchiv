@@ -8,6 +8,19 @@ Template.LocationsList.events({
 /* LocationsList: Helpers */
 /*****************************************************************************/
 Template.LocationsList.helpers({
+    settings: function() {
+        return {
+            collection: Locations,
+            fields: [
+                "_id",
+                "title",
+                "city",
+                "plz",
+                "street"
+            ],
+            class: "table table-bordered table-hover"
+        }
+    }
 });
 
 /*****************************************************************************/

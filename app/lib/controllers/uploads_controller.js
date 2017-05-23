@@ -1,4 +1,4 @@
-PhotosController = RouteController.extend({
+UploadsController = RouteController.extend({
 
     // A place to put your subscriptions
     // this.subscribe('items');
@@ -6,7 +6,7 @@ PhotosController = RouteController.extend({
     // this.subscribe('item', this.params._id).wait();
 
     subscriptions: function () {
-        return this.subscribe('photos');
+
     },
 
     // Subscriptions or other things we want to "wait" on. This also
@@ -46,11 +46,6 @@ PhotosController = RouteController.extend({
     // regions automatically.
     // Example:
     //  action: 'myActionFunction'
-
-    list: function () {
-        this.render('PhotosList');
-    },
-
     upload: function() {
         this.render('PhotosForm');
     }

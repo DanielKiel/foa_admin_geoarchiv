@@ -2,12 +2,23 @@
 /* MineralColorsList: Event Handlers */
 /*****************************************************************************/
 Template.MineralColorsList.events({
+
 });
 
 /*****************************************************************************/
 /* MineralColorsList: Helpers */
 /*****************************************************************************/
 Template.MineralColorsList.helpers({
+    settings: function() {
+        return {
+            collection: MineralColors,
+            fields: [
+                "_id",
+                "name"
+            ],
+            class: "table table-bordered table-hover"
+        }
+    }
 });
 
 /*****************************************************************************/

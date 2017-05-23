@@ -1,30 +1,41 @@
 <template name="MasterLayout">
-  <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-        <span class="sr-only">Toggle navigation</span>
-      </button>
-      <a class="navbar-brand" href="#">geoarchiv</a>
+    <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="/">geoarchiv</a>
+        </div>
+        {{#if isUser}}
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">UserManagement <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{pathFor route='articles.list'}}">Articles</a></li>
+                        <li><a href="{{pathFor route='categories.list'}}">Categories</a></li>
+                        <li><a href="{{pathFor route='galleries.list'}}">Galleries</a></li>
+                        <li><a href="{{pathFor route='geocoordinates.list'}}">GeoCoordinates</a></li>
+                        <li><a href="{{pathFor route='links.list'}}">Links</a></li>
+                        <li><a href="{{pathFor route='locations.list'}}">Locations</a></li>
+                        <li><a href="{{pathFor route='mineralcategories.list'}}">MineralCategories</a></li>
+                        <li><a href="{{pathFor route='mineralcolors.list'}}">MineralColors</a></li>
+                        <li><a href="{{pathFor route='minerals.list'}}">Minerals</a></li>
+                        <li><a href="{{pathFor route='photos.list'}}">Photos</a></li>
+                        <!--<li><a href="{{pathFor route='meta.roles.list'}}">Rollen</a></li>-->
+                        <!--<li><a href="{{pathFor route='meta.permissions.list'}}">Permissions</a></li>-->
+                    </ul>
+                </li>
+                <li><a href="{{pathFor route='photos.upload'}}">File-Upload</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+        {{/if}}
+    </nav>
+
+
+    <div class="container">
+        {{> yield}}
     </div>
-    {{#if isUser}}
-    <div class="collapse navbar-collapse" id="navbar-collapse-01">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UserManagement <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <!--<li><a href="{{pathFor route='meta.user.list'}}">User</a></li>-->
-            <!--<li><a href="{{pathFor route='meta.roles.list'}}">Rollen</a></li>-->
-            <!--<li><a href="{{pathFor route='meta.permissions.list'}}">Permissions</a></li>-->
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-    {{/if}}
-  </nav>
-
-
-  <div class="container">
-    {{> yield}}
-  </div>
 
 </template>

@@ -8,6 +8,18 @@ Template.ArticlesList.events({
 /* ArticlesList: Helpers */
 /*****************************************************************************/
 Template.ArticlesList.helpers({
+
+    settings: function() {
+        return {
+            collection: Articles,
+            fields: [
+                "_id",
+                "headline"
+            ],
+            class: "table table-bordered table-hover"
+        }
+    }
+
 });
 
 /*****************************************************************************/

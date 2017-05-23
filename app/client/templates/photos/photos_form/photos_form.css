@@ -3,3 +3,16 @@
 /*****************************************************************************/
 .photos-form {
 }
+
+#gallery .thumbnail{
+    width:160px;
+    height: 160px;
+    float:left;
+    margin:2px;
+}
+
+#gallery .thumbnail img{
+    width:150px;
+    height: 150px;
+}
+

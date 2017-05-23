@@ -7,7 +7,7 @@ Router.configure({
 
 Router.onBeforeAction(function(){
 
-    if (! Session.get('token')) {
+    if (! localStorage.getItem('token')) {
        this.redirect('/');
     }
     else {
@@ -309,9 +309,9 @@ Router.route('/photos/list', {
     action: "list"
 });
 
-Router.route('/photos/get', {
-    name: "photos.get",
-    controller: "PhotosController",
+Router.route('/photos/upload', {
+    name: "photos.upload",
+    controller: "UploadsController",
     where: 'client',
-    action: "get"
+    action: "upload"
 });

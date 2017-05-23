@@ -31,3 +31,4 @@ random
 meteorhacks:aggregate
 jss:flat-ui
 session
+dburles:mongo-collection-instances

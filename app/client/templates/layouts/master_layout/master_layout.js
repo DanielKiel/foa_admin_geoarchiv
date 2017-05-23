@@ -1,7 +1,7 @@
 Template.MasterLayout.helpers({
 
     "isUser": function() {
-        if (! Session.get('token')) {
+        if (! localStorage.getItem('token')) {
             return false;
         }
 
